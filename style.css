@@ -1,0 +1,607 @@
+@font-face {
+    font-family: 'iranyekanbold';
+    font-style: normal;
+    font-weight: bold;
+    src: url("font/iranYekan/492984b8.woff");
+}
+
+@font-face {
+    font-family: 'bbadr';
+    font-style: normal;
+    font-weight: bold;
+    src: url("font/bbadr/BBadr.woff");
+}
+
+@font-face {
+    font-family: 'light';
+    font-style: normal;
+    font-weight: bold;
+    src: url("font/iranYekan/a80f71ff.woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    direction: rtl;
+    background-color: #fdeff9;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.tak-Megrim {
+    font-family: 'Megrim', cursive;
+}
+
+.tak-saria {
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.tak-iranyekanbold {
+    font-family: iranyekanbold;
+}
+
+.tak-light {
+    font-family: light;
+}
+
+.light-color {
+    color: #999999;
+}
+
+article{
+    padding-bottom: 70px;
+}
+/*hadeer*/
+.tak-header-wide {
+    width: 100%;
+    box-shadow: 0 0 20px -5px #ffffff;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.tak-header-inner {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tak-felor-text-header {
+    position: absolute;
+    width: 100%;
+    color: #ca7c7b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.tak-menu-icon {
+    height: 60%;
+}
+
+.tak-hader-follow-us {
+    height: 60%;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tak-hader-insta-icon {
+    height: 23px;
+    padding-right: 15px;
+}
+
+.tak-header-follow-us-text {
+    font-family: 'Megrim', cursive;
+    font-size: 20px;
+}
+
+/*//hadeer*/
+/*articel one*/
+.article-one {
+    width: 100%;
+    height: calc(100% - 70px);
+    direction: ltr;
+    padding-top: 60px;
+}
+
+/*//articel one*/
+/*article two*/
+/*carosel fade*/
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: .6s;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+    opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+}
+
+/*//carosel fade*/
+.article-two {
+    width: 100%;
+}
+
+.tak-article-two-inner {
+    width: 100%;
+}
+
+.tak-title-div {
+    width: 100%;
+}
+
+.bg-taitle{
+    margin-top: 27px;
+    background-color: #f9dee0ab;
+    text-align: center;
+}
+
+.tak-title-persian {
+    font-size: 20px;
+    color: #313131;
+    border-bottom: 1px solid #ca7c7b;
+    padding: 5px;
+}
+
+.tak-title-eng {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    color: #212121;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.tak-descriptions {
+    width: 100%;
+    text-align: justify;
+    color: #515151;
+    padding: 20px 18px;
+    padding-bottom: 40px;
+    line-height: 30px;
+}
+
+.tak-curl-of-eyelashes {
+    width: 100%;
+    padding: 20px 0;
+    padding-bottom: 50px;
+    direction: ltr;
+}
+
+.tak-curl-ghab {
+    width: 70px;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 100px;
+    border: 1.5px dashed #ca7c7b;
+    background-color: #fff;
+}
+
+.tak-curl-img {
+    width: 100%;
+}
+
+.tak-curl-text {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tak-box-teknikha-parent{
+    width: 100%;
+    padding: 0 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tak-box-teknikha {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin: 0;
+}
+
+.tak-box-teknikha-img {
+    width: 100%;
+    height: auto;
+}
+
+.tak-box-teknikha-title {
+    width: 100%;
+    /*border: 1px solid #E06793;*/
+    background-color: #fff;
+    color: #E06793;
+    font-family: light;
+    font-size: 14px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*//article two*/
+/*article three*/
+.article-three {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-three-inner-cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+.tak-article-three-button {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ca7c7b;
+    border-radius: 100px;
+    margin-top: 30px;
+    /*margin-bottom: 27px;*/
+    cursor: pointer;
+}
+
+.tak-article-three-play-buttton {
+    padding-left: 5px;
+    width: 30px;
+    height: auto;
+}
+
+.article-three-video {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+/*//article three*/
+/*article four*/
+.article-four {
+    width: 100%;
+}
+
+.tak-price-list-box {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tak-price-list-box-certificate-img{
+    width: 100px;
+    height: auto;
+    padding-top: 20px;
+}
+
+.tak-price-list-box-certificate-des{
+    width: 100%;
+    text-align: justify;
+    color: #ca7c7b;
+    font-size: 13px;
+    line-height: 25px;
+    padding: 0 25px;
+    padding-bottom: 20px;
+}
+
+.tak-price-list-box-certificate-price{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #e6b4b8;
+    border-bottom: 1px solid #f9dee0;
+}
+
+.tak-border-none{
+    border: none;
+}
+
+.tak-bg-sorati{
+    background-color: #f9dee0;
+    box-shadow: 0 0 30px -5px #f9dee0;
+    margin-bottom: 20px;
+}
+
+.tak-price-list-box-title-days {
+    width: 100%;
+}
+
+.tak-price-list-box-rl {
+    width: 100%;
+    height: auto;
+}
+
+.tak-border {
+    border-left: 1px solid #fdeff9;
+}
+
+.tak-price-list-box-rl-title {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 17px;
+    color: #ca7c7b;
+    background-color: #f9dee0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tak-price-list-box-rl-des{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.tak-price-list-box-rl-des-sub{
+    width: 100%;
+    padding: 15px;
+    font-size: 14px ;
+    display: flex;
+    color: #ca7c7b;
+    background-color: #fff6f6;
+    justify-content: center;
+    text-align: center;
+}
+
+.tak-price-list-box-rl-des-sub:nth-child(odd) {
+    background: #fff;
+}
+/****************************/
+.tak-article-four-inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.tak-article-four-card {
+    width: 100%;
+    height: 400px;
+    padding-bottom: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tak-article-four-card1-inner {
+    width: 50%;
+    height: 388px;
+    background-color: #fcd1eb;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.tak-article-four-card2-inner {
+    width: 50%;
+    height: 388px;
+    background-color: #fcd1eb;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.tak-article-four-card3-inner-two {
+    width: 50%;
+    height: 388px;
+    background-color: #fcd1eb;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.tak-article-four-card4-inner-two {
+    width: 50%;
+    height: 388px;
+    background-color: #fcd1eb;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.tak-article-four-card-front {
+    width: calc(100% - 88px);
+    height: 300px;
+    background-color: #fff;
+    z-index: 2;
+}
+
+/*//article four*/
+/*article five*/
+.article-five {
+    width: 100%;
+}
+
+.article-five-img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/*//article five*/
+/*article five five*/
+.article-five-five{
+  width: 100%;
+}
+
+.tak-rules-cart{
+    width: 100%;
+}
+
+.tak-rule-box{
+    width: 100%;
+    min-height: 100%;
+    background-color: #f9dee0;
+    box-shadow: 0 0 30px -5px #f9dee0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .tak-rule-box{
+        min-height: unset;
+    }
+}
+
+.tak-rule-box-img{
+    height: 100px;
+    margin: 40px 0 5px 0;
+}
+
+.tak-rule-box-rl-title{
+    width: 100%;
+    padding: 30px 0;
+    font-size: 17px;
+    color: #ca7c7b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*//article five five*/
+/*article six*/
+.article-six {
+    width: 100%;
+}
+
+.tak-box-person{
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.tak-person-img-relative{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tak-person-img{
+    width: 100%;
+}
+
+.tak-person-name{
+    width: 100%;
+    text-align: center;
+    border: 1px solid #E06793;
+    padding: 10px 0;
+    color: #E06793;
+    font-size: 20px;
+    font-weight: 500;
+}
+/*//article six*/
+/*article seven*/
+.article-seven {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+}
+
+.gmap {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+}
+
+.tak-map-filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ca7c7b94;
+    backdrop-filter: grayscale(100%) invert(80%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/*//article seven*/
+/*responsive*/
+@media only screen and (max-width: 800px) {
+    .tak-felor-text-header {
+        justify-content: flex-end;
+        font-size: 23px;
+    }
+
+    /*article four*/
+    .tak-article-four-card2-inner {
+        left: 0;
+        right: unset;
+    }
+
+    .tak-article-four-card3-inner-two {
+        right: 0;
+        left: unset;
+    }
+
+    /*//article four*/
+    /*article six*/
+    .tak-person-div {
+        width: 130px;
+        height: 130px;
+        border-radius: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    /*//article six*/
+}
+
+/*//responsive*/
