@@ -1,51 +1,71 @@
-var takMenuOP = 0;
-var buttonNumber = 0;
-var elmHeader = $(".tak-header");
+//variables
+const menuIcon = document.querySelector('.tak-menu-icon-parent');
+const dashes = document.querySelectorAll('.tak-menu-dash');
+const menuElement = document.querySelectorAll('.tak-inner-menu-box');
+const nav = document.querySelector('.tak-nav');
+const contactMenu = document.querySelector('.tak-hader-contact-us');
+const navContactMenu = document.querySelector('.tak-nav-contact-us');
+const loading = document.querySelector('.loading');
 
-$(document).ready(function(){
+let menuZamen = 0;
+let cMenuZamen = 0;
 
-    $(".tak-menu-nav , .bottom-nav-menu-js").click(function(){
-        if (takMenuOP === 0){
-            takMenuOP = 1;
-            document.getElementsByClassName('tak-menu-wide')[0].style.display = "flex";
-            $(".bottom-nav-menu-js").attr("src","images/close.svg");
-            $('.tak-menu-a').addClass("fadeInUpBig");
-        }else{
-            takMenuOP = 0;
-            document.getElementsByClassName('tak-menu-wide')[0].style.display = "none";
-            $(".bottom-nav-menu-js").attr("src","images/list.svg");
-            $('.tak-menu-a').removeClass("fadeInUpBig");
-        }
+//event listeners
+eventListener();
+function  eventListener(){
+    menuIcon.addEventListener('click', menu);
+    menuElement.forEach(e =>{
+      e.addEventListener('click', menu);
     });
+    contactMenu.addEventListener('click', cMenu);
+    window.addEventListener('DOMContentLoaded', webLoading);
+}
 
-    $(window).on("scroll",function (e) {
+//functions
+function menu(){
+    if (cMenuZamen === 1){
+        cMenu();
+    }
+    if(menuZamen === 0){
+        menuZamen = 1;
+        nav.style.top = '70px';
+        nav.style.left = '0';
+        dashes.forEach(dash =>{
+            dash.style.transform = 'rotatez(45deg)'
+        })
+    }else{
+        menuZamen = 0;
+        nav.style.top = '-100%';
+        nav.style.left = '100%';
+        dashes.forEach(dash =>{
+            dash.style.transform = 'rotatez(0deg)'
+        })
+    }
+}
 
-        if(elmHeader.offset().top >= 5){
-            elmHeader.css({
-                backgroundColor: "#0d0d0d",
-                boxShadow: "0 0 50px -5px #000",
-                backdropFilter: "blur(15px) saturate(180%)",
-            });
-        }else{
-            elmHeader.css({
-                backgroundColor: "transparent",
-                backdropFilter: "unset",
-                boxShadow: "unset",
-            });
-        }
-    });
+function cMenu(){
+    if (menuZamen === 1){
+        menu();
+    }
+    if(cMenuZamen === 0){
+        cMenuZamen = 1;
+        navContactMenu.style.top = '70px';
+        navContactMenu.style.right = '0';
+        contactMenu.style.color = "#fff";
+        contactMenu.style.backgroundColor = "#373737";
+        contactMenu.textContent = "Close";
 
-    $(".tak-call-js").click(function(){
-        if (buttonNumber === 0){
-            buttonNumber = 1;
-            $(".bottom-nav-inner-numbers-div").css({
-                bottom: "66px",
-            })
-        }else{
-            buttonNumber = 0;
-            $(".bottom-nav-inner-numbers-div").css({
-                bottom: "0",
-            })
-        }
-    });
-});
+    }else if(cMenuZamen === 1){
+        cMenuZamen = 0;
+        navContactMenu.style.top = '-100%';
+        navContactMenu.style.right = '100%';
+        contactMenu.style.color = "#373737";
+        contactMenu.style.backgroundColor = "#fff";
+        contactMenu.textContent = "Contact US";
+    }
+
+}
+
+function webLoading(){
+    loading.style.display = 'none'
+}

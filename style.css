@@ -19,6 +19,8 @@
     src: url("font/iranYekan/a80f71ff.woff2");
 }
 
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
 * {
     margin: 0;
     padding: 0;
@@ -57,9 +59,99 @@ html, body {
     color: #999999;
 }
 
-article{
+article {
     padding-bottom: 70px;
 }
+/*loader*/
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    direction: ltr;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+}
+
+.loading-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+}
+.loading-text span {
+    display: inline-block;
+    margin: 0 5px;
+    color: #373737;
+    font-family: "Quattrocento Sans", sans-serif;
+}
+.loading-text span:nth-child(1) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 0s infinite linear alternate;
+    animation: blur-text 1.5s 0s infinite linear alternate;
+}
+.loading-text span:nth-child(2) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 0.2s infinite linear alternate;
+    animation: blur-text 1.5s 0.2s infinite linear alternate;
+}
+.loading-text span:nth-child(3) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 0.4s infinite linear alternate;
+    animation: blur-text 1.5s 0.4s infinite linear alternate;
+}
+.loading-text span:nth-child(4) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 0.6s infinite linear alternate;
+    animation: blur-text 1.5s 0.6s infinite linear alternate;
+}
+.loading-text span:nth-child(5) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 0.8s infinite linear alternate;
+    animation: blur-text 1.5s 0.8s infinite linear alternate;
+}
+.loading-text span:nth-child(6) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 1s infinite linear alternate;
+    animation: blur-text 1.5s 1s infinite linear alternate;
+}
+.loading-text span:nth-child(7) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 1.2s infinite linear alternate;
+    animation: blur-text 1.5s 1.2s infinite linear alternate;
+}
+
+@-webkit-keyframes blur-text {
+    0% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(4px);
+    }
+}
+
+@keyframes blur-text {
+    0% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(4px);
+    }
+}
+/*//loader*/
 /*hadeer*/
 .tak-header-wide {
     width: 100%;
@@ -90,23 +182,43 @@ article{
     font-size: 30px;
 }
 
-.tak-menu-icon {
-    height: 60%;
+.tak-menu-icon-parent {
+    height: 20px;
+    width: 35px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     z-index: 1;
     cursor: pointer;
 }
 
-.tak-hader-follow-us {
+.tak-menu-dash {
+    width: 100%;
+    height: 1px;
+    background-color: #575757;
+    transition: 0.5s;
+}
+
+.tak-hader-contact-us {
     height: 60%;
-    padding: 10px 5px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid #373737;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.tak-hader-contact-us:hover {
+    background-color: #fdeff9;
+    transition: 0.3s;
 }
 
 .tak-hader-insta-icon {
     height: 23px;
-    padding-right: 15px;
 }
 
 .tak-header-follow-us-text {
@@ -116,7 +228,59 @@ article{
 
 /*//hadeer*/
 /*menu*/
+.tak-nav {
+    width: 100%;
+    height: calc(100% - 70px);
+    padding: 40px 0;
+    background-color: #fff;
+    z-index: 19;
+    position: fixed;
+    top: -100%;
+    left: 100%;
+    overflow: auto;
+    transition: 0.5s;
+}
+
+.tak-inner-menu-box {
+    width: 100%;
+    height: 20vh;
+    padding: 15px;
+    background-color: #fdeff9;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.tak-inner-menu-box > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: #373737;
+}
+
+.tak-inner-menu-box:hover {
+    background-color: #ffe0fc;
+    transition: 0.3s;
+}
+
 /*//menu*/
+/*contact us menu*/
+.tak-nav-contact-us{
+    width: 100%;
+    height: calc(100% - 70px);
+    padding: 40px 0;
+    background-color: #fff;
+    z-index: 19;
+    position: fixed;
+    top: -100%;
+    right: 100%;
+    overflow: auto;
+    transition: 0.5s;
+}
+/*//contact us menu*/
 /*articel one*/
 .article-one {
     width: 100%;
@@ -155,7 +319,7 @@ article{
 }
 
 /*//carosel fade*/
-.article-two {
+#article-two {
     width: 100%;
 }
 
@@ -167,7 +331,7 @@ article{
     width: 100%;
 }
 
-.bg-taitle{
+.bg-taitle {
     margin-top: 27px;
     background-color: #fdeff9b3;
     text-align: center;
@@ -225,7 +389,7 @@ article{
     justify-content: center;
 }
 
-.tak-box-teknikha-parent{
+.tak-box-teknikha-parent {
     width: 100%;
     padding: 0 8px;
     display: flex;
@@ -259,7 +423,7 @@ article{
 
 /*//article two*/
 /*article three*/
-.article-three {
+#article-three {
     width: 100%;
     position: relative;
     display: flex;
@@ -304,7 +468,7 @@ article{
 
 /*//article three*/
 /*article four*/
-.article-four {
+#article-four {
     width: 100%;
 }
 
@@ -317,13 +481,13 @@ article{
     flex-direction: column;
 }
 
-.tak-price-list-box-certificate-img{
+.tak-price-list-box-certificate-img {
     width: 100px;
     height: auto;
     padding-top: 20px;
 }
 
-.tak-price-list-box-certificate-des{
+.tak-price-list-box-certificate-des {
     width: 100%;
     text-align: justify;
     color: #373737;
@@ -333,7 +497,7 @@ article{
     padding-bottom: 20px;
 }
 
-.tak-price-list-box-certificate-price{
+.tak-price-list-box-certificate-price {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -343,11 +507,11 @@ article{
     border-bottom: 1px solid #fdeff9;
 }
 
-.tak-border-none{
+.tak-border-none {
     border: none;
 }
 
-.tak-bg-sorati{
+.tak-bg-sorati {
     background-color: #fdeff9;
     box-shadow: 0 0 30px -5px #f9dee0;
     margin-bottom: 20px;
@@ -378,15 +542,16 @@ article{
     justify-content: center;
 }
 
-.tak-price-list-box-rl-des{
+.tak-price-list-box-rl-des {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-.tak-price-list-box-rl-des-sub{
+
+.tak-price-list-box-rl-des-sub {
     width: 100%;
     padding: 15px;
-    font-size: 14px ;
+    font-size: 14px;
     display: flex;
     color: #373737;
     background-color: #fdeff94f;
@@ -397,6 +562,7 @@ article{
 .tak-price-list-box-rl-des-sub:nth-child(odd) {
     background: #fff;
 }
+
 /****************************/
 .tak-article-four-inner {
     width: 100%;
@@ -464,7 +630,7 @@ article{
 
 /*//article four*/
 /*article five*/
-.article-five {
+#article-five {
     width: 100%;
 }
 
@@ -477,15 +643,15 @@ article{
 
 /*//article five*/
 /*article five five*/
-.article-five-five{
-  width: 100%;
-}
-
-.tak-rules-cart{
+#article-five-five {
     width: 100%;
 }
 
-.tak-rule-box{
+.tak-rules-cart {
+    width: 100%;
+}
+
+.tak-rule-box {
     width: 100%;
     min-height: 100%;
     background-color: #fff;
@@ -498,17 +664,15 @@ article{
 
 @media only screen and (max-width: 800px) {
 
-    .tak-rule-box{
-        min-height: unset;
-    }
+
 }
 
-.tak-rule-box-img{
+.tak-rule-box-img {
     height: 100px;
     margin: 40px 0 5px 0;
 }
 
-.tak-rule-box-rl-title{
+.tak-rule-box-rl-title {
     width: 100%;
     padding: 30px 0;
     font-size: 17px;
@@ -517,18 +681,19 @@ article{
     align-items: center;
     justify-content: center;
 }
+
 /*//article five five*/
 /*article six*/
 .article-six {
     width: 100%;
 }
 
-.tak-box-person{
+.tak-box-person {
     width: 100%;
     padding-bottom: 30px;
 }
 
-.tak-person-img-relative{
+.tak-person-img-relative {
     width: 100%;
     position: relative;
     display: flex;
@@ -536,11 +701,11 @@ article{
     justify-content: center;
 }
 
-.tak-person-img{
+.tak-person-img {
     width: 100%;
 }
 
-.tak-person-name{
+.tak-person-name {
     width: 100%;
     text-align: center;
     border: 1px solid #E06793;
@@ -549,9 +714,10 @@ article{
     font-size: 20px;
     font-weight: 500;
 }
+
 /*//article six*/
 /*article seven*/
-.article-seven {
+#article-seven {
     width: 100%;
     height: 400px;
     position: relative;
@@ -575,11 +741,32 @@ article{
 }
 
 /*//article seven*/
+/*footer*/
+.tak-footer{
+    width: 100%;
+    background-color: #373737;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.tak-bottom-footer{
+    width: 100%;
+    font-size: 13px;
+    direction: ltr;
+    padding: 25px 0;
+}
+/*//footer*/
 /*responsive*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
     .tak-felor-text-header {
         justify-content: flex-end;
         font-size: 23px;
+    }
+
+    .tak-menu-icon-parent {
+        height: 18px;
+        width: 30px;
     }
 
     /*article four*/
@@ -594,18 +781,11 @@ article{
     }
 
     /*//article four*/
-    /*article six*/
-    .tak-person-div {
-        width: 130px;
-        height: 130px;
-        border-radius: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
+    /*article five*/
+    .tak-rule-box {
+        min-height: unset;
     }
-
-    /*//article six*/
+    /*//article five*/
 }
 
 /*//responsive*/
