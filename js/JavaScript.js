@@ -18,7 +18,7 @@ function  eventListener(){
       e.addEventListener('click', menu);
     });
     contactMenu.addEventListener('click', cMenu);
-    window.addEventListener('DOMContentLoaded', webLoading);
+    // window.addEventListener('DOMContentLoaded', webLoading);
 }
 
 //functions
@@ -67,5 +67,8 @@ function cMenu(){
 }
 
 function webLoading(){
-    loading.style.display = 'none'
+    setTimeout(()=>{
+        loading.style.opacity = '0';
+        loading.style.zIndex = '0';
+    },2000)
 }
