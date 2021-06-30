@@ -67,7 +67,7 @@ article{
     position: fixed;
     top: 0;
     background-color: #fff;
-    z-index: 100;
+    z-index: 20;
 }
 
 .tak-header-inner {
@@ -92,6 +92,8 @@ article{
 
 .tak-menu-icon {
     height: 60%;
+    z-index: 1;
+    cursor: pointer;
 }
 
 .tak-hader-follow-us {
@@ -113,6 +115,8 @@ article{
 }
 
 /*//hadeer*/
+/*menu*/
+/*//menu*/
 /*articel one*/
 .article-one {
     width: 100%;
